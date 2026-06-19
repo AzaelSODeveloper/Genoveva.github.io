@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azael Sánchez Ortiz | Galería de Arte</title>
+
+  <!-- Bootstrap (copia local en Css/) -->
+  <link href="Css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilos propios del sitio -->
+  <link href="Css/estilo.css" rel="stylesheet">
+</head>
+<body>
+
+  <header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <!-- ===========================================================
+             NOMBRE DEL ARTISTA
+             Se pinta automáticamente desde JS/contacto.js
+             (objeto DATOS_CONTACTO.nombreArtista).
+             Para cambiarlo, edita ese archivo, NO este HTML.
+             =========================================================== -->
+        <a class="navbar-brand nombre-artista js-nombre-artista" href="#">Cargando...</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tributo">Tributo al maestro</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <!-- ===========================================================
+         CARRUSEL (estructura de la plantilla oficial de Bootstrap:
+         https://getbootstrap.com/docs/5.3/examples/carousel/)
+         Cada <div class="carousel-item"> es una obra.
+         Para agregar/quitar obras:
+         1) Copia o borra un bloque "carousel-item" completo.
+         2) Agrega/quita su botón en "carousel-indicators".
+         3) Cambia la ruta img/ y el texto del título/descripción.
+         El tamaño se ajusta solo (ver Css/estilo.css) sin importar
+         la resolución original de cada foto.
+         =========================================================== -->
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/cuadro1.jpeg" alt="Obra 1">
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>Obra 1</h1>
+              <p class="opacity-75">Título, técnica y año de esta obra (texto de prueba).</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/cuadro2.jpeg" alt="Obra 2">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Obra 2</h1>
+              <p>Título, técnica y año de esta obra (texto de prueba).</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/cuadro3.jpeg" alt="Obra 3">
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1>Obra 3</h1>
+              <p>Título, técnica y año de esta obra (texto de prueba).</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/cuadro4.jpeg" alt="Obra 4">
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>Obra 4</h1>
+              <p class="opacity-75">Título, técnica y año de esta obra (texto de prueba).</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/cuadro5.jpeg" alt="Obra 5">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Obra 5</h1>
+              <p>Título, técnica y año de esta obra (texto de prueba).</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/cuadro6.jpeg" alt="Obra 6">
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1>Obra 6</h1>
+              <p>Título, técnica y año de esta obra (texto de prueba).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <div class="container marketing">
+
+      <!-- Sobre la artista / el maestro -->
+      <div class="row">
+        <div class="col-lg-4">
+          <h2 class="fw-normal">Genove Ortiz Paz</h2>
+          <p>Pintora dedicada al óleo y la técnica mixta, alumna del maestro Sciddel.</p>
+        </div>
+        <div class="col-lg-4">
+          <h2 class="fw-normal">Su estilo</h2>
+          <p>Una búsqueda constante por capturar la luz, el color y la vida cotidiana en cada obra.</p>
+        </div>
+        <div class="col-lg-4">
+          <h2 class="fw-normal">Maestro Sciddel</h2>
+          <p>Guía y mentor de Genove, le transmitió los fundamentos del color y la composición.</p>
+          <p><a class="btn btn-secondary" href="#tributo">Ver tributo &raquo;</a></p>
+        </div>
+      </div>
+
+      <!-- START THE FEATURETTES -->
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Obra 1. <span class="text-body-secondary">Terminada y enmarcada.</span></h2>
+          <p class="lead">Texto de prueba — sustituir por la descripción real de esta obra: técnica, año y lugar.</p>
+        </div>
+        <div class="col-md-5">
+          <img src="img/cuadro1.jpeg" class="featurette-image img-fluid mx-auto" alt="Obra 1">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">Obra 2. <span class="text-body-secondary">Disponible.</span></h2>
+          <p class="lead">Texto de prueba — sustituir por la descripción real de esta obra.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="img/cuadro2.jpeg" class="featurette-image img-fluid mx-auto" alt="Obra 2">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Obra 3. <span class="text-body-secondary">Recién terminada.</span></h2>
+          <p class="lead">Texto de prueba — sustituir por la descripción real de esta obra.</p>
+        </div>
+        <div class="col-md-5">
+          <img src="img/cuadro3.jpeg" class="featurette-image img-fluid mx-auto" alt="Obra 3">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- Galería completa -->
+      <div id="galeria">
+        <h2 class="fw-normal text-center mb-4">Galería de obras</h2>
+        <div class="row g-4 mb-5">
+          <div class="col-md-4"><img src="img/cuadro1.jpeg" class="img-fluid rounded" alt="Obra 1"></div>
+          <div class="col-md-4"><img src="img/cuadro2.jpeg" class="img-fluid rounded" alt="Obra 2"></div>
+          <div class="col-md-4"><img src="img/cuadro3.jpeg" class="img-fluid rounded" alt="Obra 3"></div>
+          <div class="col-md-4"><img src="img/cuadro4.jpeg" class="img-fluid rounded" alt="Obra 4"></div>
+          <div class="col-md-4"><img src="img/cuadro5.jpeg" class="img-fluid rounded" alt="Obra 5"></div>
+          <div class="col-md-4"><img src="img/cuadro6.jpeg" class="img-fluid rounded" alt="Obra 6"></div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- ===========================================================
+           TRIBUTO AL MAESTRO SCIDDEL
+           Imagen ubicada en:
+           C:\Pagina mama\img\300808830_500281958767911_8876839956045318684_n.jpg
+           =========================================================== -->
+      <div id="tributo" class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Tributo al maestro Sciddel.</h2>
+          <p class="lead">
+            Este espacio está dedicado al maestro Sciddel, guía y mentor de Genove Ortiz Paz
+            en su formación artística. En su local, donde se tomó esta fotografía, compartió
+            generosamente su técnica, su disciplina y su pasión por el arte con sus alumnos.
+          </p>
+          <p class="text-body-secondary">
+            (Texto de prueba — agregar aquí más detalles sobre la historia del maestro,
+            su trayectoria y su legado cuando se tenga la información definitiva.)
+          </p>
+        </div>
+        <div class="col-md-5">
+          <img src="img/300808830_500281958767911_8876839956045318684_n.jpg" class="featurette-image img-fluid mx-auto" alt="Maestro Sciddel en su local">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+      <!-- /END THE FEATURETTES -->
+    </div>
+
+    <!-- ===========================================================
+         CONTACTO
+         Los datos (teléfono y correo) se cargan automáticamente
+         desde JS/contacto.js → objeto DATOS_CONTACTO.
+         PARA CAMBIARLOS EN EL FUTURO: edita solo ese archivo.
+         =========================================================== -->
+    <div id="contacto" class="container marketing">
+      <h2 class="fw-normal text-center mb-4">Contacto</h2>
+      <div class="row g-5 mb-5">
+        <div class="col-md-5 text-center text-md-start">
+          <p class="mb-2">Teléfono: <a class="js-telefono" href="#">Cargando...</a></p>
+          <p class="mb-2">Correo: <a class="js-correo" href="#">Cargando...</a></p>
+          <p class="text-body-secondary small mt-3">
+            (Datos de prueba — se actualizarán con la información real de la artista.)
+          </p>
+        </div>
+        <div class="col-md-7">
+          <form id="formulario-contacto">
+            <div class="mb-3">
+              <label for="campo-nombre" class="form-label">Tu nombre</label>
+              <input type="text" class="form-control" id="campo-nombre" required>
+            </div>
+            <div class="mb-3">
+              <label for="campo-correo" class="form-label">Tu correo</label>
+              <input type="email" class="form-control" id="campo-correo" required>
+            </div>
+            <div class="mb-3">
+              <label for="campo-mensaje" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="campo-mensaje" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+            <p id="estado-contacto" class="mt-3"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="container">
+      <p class="float-end"><a href="#inicio">Volver arriba</a></p>
+      <p>&copy; 2026 <span class="js-nombre-artista">Azael Sánchez Ortiz</span> &middot; Todos los derechos reservados.</p>
+    </footer>
+  </main>
+
+  <!-- Bootstrap JS (copia local en JS/) -->
+  <script src="JS/bootstrap.bundle.min.js"></script>
+  <!-- Datos de contacto y lógica del formulario -->
+  <script src="JS/contacto.js"></script>
+</body>
+</html>

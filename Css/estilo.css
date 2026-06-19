@@ -1,0 +1,88 @@
+/* ===========================================================
+   ESTILOS PERSONALIZADOS DEL SITIO
+   (Basado en la plantilla oficial "Carousel" de Bootstrap 5.3:
+   https://getbootstrap.com/docs/5.3/examples/carousel/)
+   =========================================================== */
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+/* Nombre del artista en el encabezado: grande pero sutil */
+.nombre-artista {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+/* ===========================================================
+   CARRUSEL RESPONSIVO
+   La plantilla oficial usa SVGs de 1900x500 (proporción ~3.8:1)
+   como placeholder. Como nuestras fotos tienen tamaños distintos,
+   usamos object-fit:cover dentro de una altura que cambia según
+   el ancho de pantalla, para que SIEMPRE se vean completas,
+   centradas y sin deformarse, en cualquier dispositivo.
+   =========================================================== */
+.carousel-inner img {
+  display: block;
+  width: 100%;
+  height: 56vw;           /* mantiene proporción tipo 16:9 en móvil */
+  max-height: 500px;      /* igual que el ejemplo oficial (1900x500) */
+  min-height: 220px;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (min-width: 768px) {
+  .carousel-inner img {
+    height: 500px;        /* en pantallas grandes, altura fija como el ejemplo oficial */
+  }
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.45);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+}
+
+/* Galería de obras */
+.obra-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Sección tributo al maestro */
+.tributo-maestro {
+  background-color: #efe9df;
+  padding: 4rem 0;
+}
+
+.tributo-maestro img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección de contacto */
+.contacto {
+  background-color: #3b3b3b;
+  color: #f5f5f5;
+  padding: 3rem 0;
+}
+
+.contacto a {
+  color: #f5f5f5;
+  text-decoration: none;
+}
+
+.contacto a:hover {
+  text-decoration: underline;
+}
+
+#estado-contacto {
+  min-height: 24px;
+}
